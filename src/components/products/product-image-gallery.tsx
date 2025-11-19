@@ -44,7 +44,7 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover transition-opacity duration-300"
+            className="object-contain transition-opacity duration-300"
             data-ai-hint={selectedImage.hint}
           />
         </div>
