@@ -36,19 +36,19 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
           </button>
         ))}
       </div>
-      <Card className="flex-1 overflow-hidden flex justify-center items-center p-4">
-        <div className="relative">
-          <Image
-            src={selectedImage.url}
-            alt={selectedImage.alt}
-            width={600}
-            height={800}
-            priority
-            className="object-contain h-auto w-full max-h-[70vh] transition-opacity duration-300"
-            data-ai-hint={selectedImage.hint}
-          />
-        </div>
-      </Card>
+      <div className="w-full md:w-[600px]">
+        <Card className="flex-1 overflow-hidden flex justify-center items-center p-4">
+            <Image
+              src={selectedImage.url}
+              alt={selectedImage.alt}
+              width={600}
+              height={800}
+              priority
+              className="object-contain h-auto w-full"
+              data-ai-hint={selectedImage.hint}
+            />
+        </Card>
+      </div>
     </div>
   );
 }
