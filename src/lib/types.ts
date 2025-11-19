@@ -1,6 +1,6 @@
 export type OlfactoryFamily = 'Floral' | 'Oriental' | 'Woody' | 'Fresh' | 'Chypre' | 'Fougère';
 
-export type Note = 'Bergamot' | 'Rose' | 'Sandalwood' | 'Oud' | 'Vanilla' | 'Jasmine' | 'Patchouli' | 'Vetiver' | 'Amber' | 'Leather' | 'Musk';
+export type Note = 'Bergamot' | 'Rose' | 'Sandalwood' | 'Oud' | 'Vanilla' | 'Jasmine' | 'Patchouli' | 'Vetiver' | 'Amber' | 'Leather' | 'Musk' | 'Pear' | 'Magnolia' | 'Peach' | 'Mandarin Orange' | 'Tuberose' | 'Plum' | 'Violet' | 'Cedar' | 'Blackberry';
 
 export type ProductImage = {
   id: string;
@@ -21,7 +21,7 @@ export type Product = {
   topNotes: Note[];
   middleNotes: Note[];
   baseNotes: Note[];
-  size: '30ml' | '50ml' | '100ml';
+  size: '10ml' | '30ml' | '50ml' | '100ml';
   isTopSeller: boolean;
   isHazmat: boolean;
 };

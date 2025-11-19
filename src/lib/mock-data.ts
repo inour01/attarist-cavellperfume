@@ -1,126 +1,59 @@
-import type { Product } from './types';
-import { PlaceHolderImages } from './placeholder-images';
-
-const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id)!;
+import { Product } from '@/lib/types';
+import { getImage } from './placeholder-images';
 
 export const products: Product[] = [
   {
-    id: 'prod_01',
-    name: 'Midnight Oud',
-    slug: 'midnight-oud',
-    description: 'A deep, mysterious fragrance that combines the richness of oud with spicy and woody notes. Perfect for an unforgettable evening.',
-    price: 180,
+    id: 'prod_adore_10',
+    name: 'Adore',
+    slug: 'adore-10ml',
+    description: "Adore | Inspired | Cavell Spray Perfume Gift For Women Pear Peach Jasmine Plum Vanilla Blackberry\n\nAdore opens with an inviting blend of juicy pear, soft magnolia, luscious peach, and a hint of bright mandarin orange, creating a fresh and vibrant first impression. As the scent unfolds, the heart reveals an elegant bouquet of jasmine and tuberose, enriched by the depth of plum and violet, adding a layer of floral sophistication and allure. Finally, the base lingers with a warm and sensual blend of creamy vanilla, rich cedar, and dark blackberry, leaving a trail that is both comforting and unforgettable. Adore is a perfect balance of fruity freshness, floral elegance, and warm woodiness—an enchanting fragrance that celebrates femininity and grace.\n\nThis listing consists of:\n0.34 oz (10 ml), and 1 oz (30 ml).\nConcentration: extrait de parfum.\nDesigned for: Women\nPackaging: packaged in a nice small gift box.\nVegan, cruelty free, Paraben and Phthalate free.\n\nTop notes:\nPear, Magnolia, Peach, Mandarin Orange\nMiddle notes:\nJasmine, Tuberose, Plum, Violet\nBase notes:\nVanilla, Cedar, Blackberry\n\nThis fragrance is independently crafted. I want to clarify that there is no connection, partnership, or affiliation between Cavell Parfums and the mentioned perfume names. Any brand names referenced are solely for comparison purposes to help customers understand the scent profile. This is not meant to mislead or infringe on the brands' trademarks and copyrights. Please note that my products are distinct interpretations and do not originate from the original designers.",
+    price: 25,
     currencyCode: 'USD',
     images: [
-      getImage('prod_01_01'),
-      getImage('prod_01_02'),
-      getImage('prod_01_03'),
-    ],
-    olfactoryFamily: 'Woody',
-    topNotes: ['Bergamot', 'Leather'],
-    middleNotes: ['Oud', 'Rose'],
-    baseNotes: ['Amber', 'Sandalwood'],
-    size: '50ml',
-    isTopSeller: true,
-    isHazmat: true,
-  },
-  {
-    id: 'prod_02',
-    name: 'Sunkissed Jasmine',
-    slug: 'sunkissed-jasmine',
-    description: 'A bright, floral scent capturing the essence of a sun-drenched garden. Light, airy, and refreshingly elegant.',
-    price: 120,
-    currencyCode: 'USD',
-    images: [
-      getImage('prod_02_01'),
-      getImage('prod_02_02'),
+      getImage('prod_adore_1'),
+      getImage('prod_adore_2'),
+      getImage('prod_adore_3'),
     ],
     olfactoryFamily: 'Floral',
-    topNotes: ['Bergamot'],
-    middleNotes: ['Jasmine'],
-    baseNotes: ['Musk'],
+    topNotes: ['Pear', 'Magnolia', 'Peach', 'Mandarin Orange'],
+    middleNotes: ['Jasmine', 'Tuberose', 'Plum', 'Violet'],
+    baseNotes: ['Vanilla', 'Cedar', 'Blackberry'],
+    size: '10ml',
+    isTopSeller: true,
+    isHazmat: false,
+  },
+  {
+    id: 'prod_adore_30',
+    name: 'Adore',
+    slug: 'adore-30ml',
+    description: "Adore | Inspired | Cavell Spray Perfume Gift For Women Pear Peach Jasmine Plum Vanilla Blackberry\n\nAdore opens with an inviting blend of juicy pear, soft magnolia, luscious peach, and a hint of bright mandarin orange, creating a fresh and vibrant first impression. As the scent unfolds, the heart reveals an elegant bouquet of jasmine and tuberose, enriched by the depth of plum and violet, adding a layer of floral sophistication and allure. Finally, the base lingers with a warm and sensual blend of creamy vanilla, rich cedar, and dark blackberry, leaving a trail that is both comforting and unforgettable. Adore is a perfect balance of fruity freshness, floral elegance, and warm woodiness—an enchanting fragrance that celebrates femininity and grace.\n\nThis listing consists of:\n0.34 oz (10 ml), and 1 oz (30 ml).\nConcentration: extrait de parfum.\nDesigned for: Women\nPackaging: packaged in a nice small gift box.\nVegan, cruelty free, Paraben and Phthalate free.\n\nTop notes:\nPear, Magnolia, Peach, Mandarin Orange\nMiddle notes:\nJasmine, Tuberose, Plum, Violet\nBase notes:\nVanilla, Cedar, Blackberry\n\nThis fragrance is independently crafted. I want to clarify that there is no connection, partnership, or affiliation between Cavell Parfums and the mentioned perfume names. Any brand names referenced are solely for comparison purposes to help customers understand the scent profile. This is not meant to mislead or infringe on the brands' trademarks and copyrights. Please note that my products are distinct interpretations and do not originate from the original designers.",
+    price: 55,
+    currencyCode: 'USD',
+    images: [
+      getImage('prod_adore_1'),
+      getImage('prod_adore_2'),
+      getImage('prod_adore_3'),
+    ],
+    olfactoryFamily: 'Floral',
+    topNotes: ['Pear', 'Magnolia', 'Peach', 'Mandarin Orange'],
+    middleNotes: ['Jasmine', 'Tuberose', 'Plum', 'Violet'],
+    baseNotes: ['Vanilla', 'Cedar', 'Blackberry'],
     size: '30ml',
-    isTopSeller: false,
-    isHazmat: false,
-  },
-  {
-    id: 'prod_03',
-    name: 'Earthen Vetiver',
-    slug: 'earthen-vetiver',
-    description: 'An earthy, grounding aroma with a heart of vetiver, balanced by fresh citrus and a hint of patchouli.',
-    price: 150,
-    currencyCode: 'USD',
-    images: [
-      getImage('prod_03_01'),
-      getImage('prod_03_02'),
-    ],
-    olfactoryFamily: 'Woody',
-    topNotes: ['Bergamot'],
-    middleNotes: ['Vetiver'],
-    baseNotes: ['Patchouli', 'Amber'],
-    size: '100ml',
-    isTopSeller: true,
-    isHazmat: false,
-  },
-  {
-    id: 'prod_04',
-    name: 'Spiced Amber',
-    slug: 'spiced-amber',
-    description: 'A warm and inviting fragrance that blends sweet amber with a medley of exotic spices. Comforting and sophisticated.',
-    price: 165,
-    currencyCode: 'USD',
-    images: [
-      getImage('prod_04_01'),
-      getImage('prod_04_02'),
-    ],
-    olfactoryFamily: 'Oriental',
-    topNotes: ['Bergamot'],
-    middleNotes: ['Rose', 'Jasmine'],
-    baseNotes: ['Amber', 'Vanilla', 'Patchouli'],
-    size: '50ml',
-    isTopSeller: false,
-    isHazmat: false,
-  },
-  {
-    id: 'prod_05',
-    name: 'Rose de Mai',
-    slug: 'rose-de-mai',
-    description: 'A classic, romantic rose scent, capturing the delicate and fresh aroma of May roses in full bloom.',
-    price: 220,
-    currencyCode: 'USD',
-    images: [
-      getImage('prod_05_01'),
-      getImage('prod_05_02'),
-    ],
-    olfactoryFamily: 'Floral',
-    topNotes: ['Bergamot'],
-    middleNotes: ['Rose'],
-    baseNotes: ['Sandalwood', 'Musk'],
-    size: '100ml',
-    isTopSeller: true,
-    isHazmat: false,
-  },
-  {
-    id: 'prod_06',
-    name: 'Coastal Drift',
-    slug: 'coastal-drift',
-    description: 'A fresh, aquatic fragrance that evokes a walk along the coast, with notes of sea salt and a hint of woody sage.',
-    price: 110,
-    currencyCode: 'USD',
-    images: [
-      getImage('prod_06_01'),
-      getImage('prod_06_02'),
-    ],
-    olfactoryFamily: 'Fresh',
-    topNotes: ['Bergamot'],
-    middleNotes: ['Jasmine'],
-    baseNotes: ['Sandalwood'],
-    size: '50ml',
     isTopSeller: false,
     isHazmat: false,
   },
 ];
 
-export const olfactoryFamilies = [...new Set(products.map(p => p.olfactoryFamily))];
-export const allNotes = [...new Set(products.flatMap(p => [...p.topNotes, ...p.middleNotes, ...p.baseNotes]))];
-export const sizes = [...new Set(products.map(p => p.size))];
+export const olfactoryFamilies = [
+  ...new Set(products.map((p) => p.olfactoryFamily)),
+];
+
+export const allNotes = [
+  ...new Set(
+    products.flatMap((p) => [...p.topNotes, ...p.middleNotes, ...p.baseNotes])
+  ),
+];
+
+export const sizes = [...new Set(products.map((p) => p.size))].sort(
+  (a, b) => parseInt(a) - parseInt(b)
+);

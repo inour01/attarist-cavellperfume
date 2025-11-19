@@ -7,82 +7,22 @@
       "imageHint": "perfume abstract"
     },
     {
-      "id": "prod_01_01",
-      "description": "Primary image for Midnight Oud.",
-      "imageUrl": "https://images.unsplash.com/photo-1594125311687-3b1b3eafa9f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
+      "id": "prod_adore_1",
+      "description": "Main image for Adore product, showing the perfume bottle surrounded by its notes.",
+      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user__gen4_0_3580598.jpeg",
+      "imageHint": "perfume bottle with notes"
     },
     {
-      "id": "prod_01_02",
-      "description": "Secondary image for Midnight Oud.",
-      "imageUrl": "https://images.unsplash.com/photo-1583651981196-fdbaa5f8b662?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvdWQlMjB3b29kfGVufDB8fHx8MTc2MzU4ODA5MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "oud wood"
+      "id": "prod_adore_2",
+      "description": "Packaging image for Adore product, showing the gift box.",
+      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user_y9q1pge4_gen4_0_3580630.jpeg",
+      "imageHint": "perfume gift box"
     },
     {
-      "id": "prod_01_03",
-      "description": "Tertiary image for Midnight Oud.",
-      "imageUrl": "https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuaWdodCUyMHNreXxlbnwwfHx8fDE3NjM1MTEyNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "night sky"
-    },
-    {
-      "id": "prod_02_01",
-      "description": "Primary image for Sunkissed Jasmine.",
-      "imageUrl": "https://images.unsplash.com/photo-1608721279136-cd41b752fa41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
-    },
-    {
-      "id": "prod_02_02",
-      "description": "Secondary image for Sunkissed Jasmine.",
-      "imageUrl": "https://images.unsplash.com/photo-1726596984710-7075a1250f58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxqYXNtaW5lJTIwZmxvd2VyfGVufDB8fHx8MTc2MzQ5OTk4MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jasmine flower"
-    },
-    {
-      "id": "prod_03_01",
-      "description": "Primary image for Earthen Vetiver.",
-      "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
-    },
-    {
-      "id": "prod_03_02",
-      "description": "Secondary image for Earthen Vetiver.",
-      "imageUrl": "https://images.unsplash.com/photo-1644820864412-2e08f6f7c975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2ZXRpdmVyJTIwcGxhbnR8ZW58MHx8fHwxNzYzNTg4MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "vetiver plant"
-    },
-    {
-      "id": "prod_04_01",
-      "description": "Primary image for Spiced Amber.",
-      "imageUrl": "https://images.unsplash.com/photo-1585218334450-afcf929da36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
-    },
-    {
-      "id": "prod_04_02",
-      "description": "Secondary image for Spiced Amber.",
-      "imageUrl": "https://images.unsplash.com/photo-1610479615051-a022c076da08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbWJlciUyMHNwaWNlfGVufDB8fHx8MTc2MzU4ODA5MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "amber spice"
-    },
-    {
-      "id": "prod_05_01",
-      "description": "Primary image for Rose de Mai.",
-      "imageUrl": "https://images.unsplash.com/photo-1615160460524-432433ba1b8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
-    },
-    {
-      "id": "prod_05_02",
-      "description": "Secondary image for Rose de Mai.",
-      "imageUrl": "https://images.unsplash.com/photo-1571506534699-c76894c03ce7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb3NlJTIwcGV0YWxzfGVufDB8fHx8MTc2MzU4ODA5MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "rose petals"
-    },
-    {
-      "id": "prod_06_01",
-      "description": "Primary image for Coastal Drift.",
-      "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2MzQ3MTcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottle"
-    },
-    {
-      "id": "prod_06_02",
-      "description": "Secondary image for Coastal Drift.",
-      "imageUrl": "https://images.unsplash.com/photo-1560260240-c6ef90a163a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvY2VhbiUyMHdhdmV8ZW58MHx8fHwxNzYzNTAxNDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ocean wave"
+      "id": "prod_adore_3",
+      "description": "Detail image for Adore 10ml product, showing the bottle with notes.",
+      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user_y9q1pge4_gen4_0_3580645.jpeg",
+      "imageHint": "perfume bottle 10ml with notes"
     }
   ]
 }
