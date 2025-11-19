@@ -9,24 +9,30 @@ export type ProductImage = {
   hint: string;
 };
 
+export type ProductVariant = {
+  id: string;
+  size: '10ml' | '30ml' | '50ml' | '100ml';
+  price: number;
+  isHazmat: boolean;
+};
+
 export type Product = {
   id: string;
   name: string;
   slug: string;
   description: string;
-  price: number;
-  currencyCode: 'USD';
   images: ProductImage[];
   olfactoryFamily: OlfactoryFamily;
   topNotes: Note[];
   middleNotes: Note[];
   baseNotes: Note[];
-  size: '10ml' | '30ml' | '50ml' | '100ml';
+  variants: ProductVariant[];
   isTopSeller: boolean;
-  isHazmat: boolean;
+  currencyCode: 'USD';
 };
 
 export type CartItem = {
   product: Product;
+  variant: ProductVariant;
   quantity: number;
 };

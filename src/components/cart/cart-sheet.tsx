@@ -25,7 +25,7 @@ interface CartSheetProps {
 
 export function CartSheet({ open, onOpenChange }: CartSheetProps) {
   const { items, totalPrice, totalItems, removeItem, clearCart } = useCart();
-  const hasHazmatItem = items.some(item => item.product.isHazmat);
+  const hasHazmatItem = items.some(item => item.variant.isHazmat);
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -39,7 +39,7 @@ export function CartSheet({ open, onOpenChange }: CartSheetProps) {
             <ScrollArea className="flex-1">
               <div className="flex flex-col gap-6 p-6">
                 {items.map((item) => (
-                  <CartItemRow key={item.product.id} item={item} />
+                  <CartItemRow key={item.variant.id} item={item} />
                 ))}
               </div>
             </ScrollArea>
@@ -89,14 +89,17 @@ function CartItemRow({ item }: { item: CartItem }) {
         />
       </div>
       <div className="flex-1 space-y-2">
-        <div className="font-semibold">{item.product.name}</div>
-        <div className="text-sm text-muted-foreground">{formatPrice(item.product.price)}</div>
+        <div>
+            <div className="font-semibold">{item.product.name}</div>
+            <div className="text-sm text-muted-foreground">{item.variant.size}</div>
+        </div>
+        <div className="text-sm text-muted-foreground">{formatPrice(item.variant.price)}</div>
         <div className="flex items-center gap-2">
           <Button
             variant="outline"
             size="icon"
             className="h-6 w-6"
-            onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+            onClick={() => updateQuantity(item.variant.id, item.quantity - 1)}
           >
             <Minus className="h-3 w-3" />
           </Button>
@@ -105,13 +108,13 @@ function CartItemRow({ item }: { item: CartItem }) {
             variant="outline"
             size="icon"
             className="h-6 w-6"
-            onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+            onClick={() => updateQuantity(item.variant.id, item.quantity + 1)}
           >
             <Plus className="h-3 w-3" />
           </Button>
         </div>
       </div>
-      <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={() => removeItem(item.product.id)}>
+      <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={() => removeItem(item.variant.id)}>
         <Trash2 className="h-4 w-4" />
       </Button>
     </div>

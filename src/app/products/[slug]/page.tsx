@@ -1,18 +1,28 @@
+'use client';
+
+import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import { products } from '@/lib/mock-data';
 import { ProductImageGallery } from '@/components/products/product-image-gallery';
 import { OlfactoryPyramid } from '@/components/products/olfactory-pyramid';
 import { AddToCartButton } from '@/components/cart/add-to-cart-button';
 import { formatPrice } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
 import { HazmatWarning } from '@/components/products/hazmat-warning';
+import { SizeSelector } from '@/components/products/size-selector';
+import type { ProductVariant } from '@/lib/types';
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   const product = products.find((p) => p.slug === params.slug);
+  
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product?.variants[0]);
 
-  if (!product) {
+  if (!product || !selectedVariant) {
     notFound();
   }
+
+  const handleVariantChange = (variant: ProductVariant) => {
+    setSelectedVariant(variant);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-12">
@@ -21,16 +31,19 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
         <div className="flex flex-col gap-6">
           <div>
-            <div className="flex items-center gap-4 mb-2">
-              <h1 className="text-4xl font-headline font-bold">{product.name}</h1>
-              <Badge variant="outline">{product.size}</Badge>
-            </div>
-            <p className="text-2xl font-semibold text-accent">{formatPrice(product.price)}</p>
+            <h1 className="text-4xl font-headline font-bold mb-2">{product.name}</h1>
+            <p className="text-2xl font-semibold text-accent">{formatPrice(selectedVariant.price)}</p>
           </div>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
             {product.description}
           </p>
+
+          <SizeSelector 
+            variants={product.variants}
+            selectedVariantId={selectedVariant.id}
+            onVariantChange={handleVariantChange}
+          />
 
           <OlfactoryPyramid
             topNotes={product.topNotes}
@@ -38,9 +51,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             baseNotes={product.baseNotes}
           />
           
-          {product.isHazmat && <HazmatWarning />}
+          {selectedVariant.isHazmat && <HazmatWarning />}
 
-          <AddToCartButton product={product} size="lg" />
+          <AddToCartButton product={product} variant={selectedVariant} size="lg" />
         </div>
       </div>
     </div>

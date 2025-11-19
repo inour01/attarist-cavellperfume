@@ -21,7 +21,7 @@ export default function ProductsPage() {
       if (note && ![...product.topNotes, ...product.middleNotes, ...product.baseNotes].includes(note as any)) {
         return false;
       }
-      if (size && product.size !== size) {
+      if (size && !product.variants.some(v => v.size === size)) {
         return false;
       }
       return true;

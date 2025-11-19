@@ -13,6 +13,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const currentImage = product.images[0];
+  const startingPrice = Math.min(...product.variants.map(v => v.price));
 
   return (
     <Card className="overflow-hidden group relative transition-shadow duration-300 hover:shadow-xl">
@@ -37,10 +38,12 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.name}
             </Link>
           </h3>
-          <p className="text-lg font-medium text-muted-foreground">{formatPrice(product.price)}</p>
+          <p className="text-lg font-medium text-muted-foreground">
+            From {formatPrice(startingPrice)}
+          </p>
         </div>
         <div className="p-4 pt-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <AddToCartButton product={product} className="w-full" />
+           <AddToCartButton product={product} variant={product.variants[0]} className="w-full" />
         </div>
       </CardContent>
     </Card>
