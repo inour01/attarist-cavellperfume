@@ -12,7 +12,7 @@ import {
 import { useCart } from '@/hooks/use-cart-store';
 import { formatPrice } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Minus, Plus, Trash2 } from 'lucide-react';
+import { Minus, Plus, Trash2, ShoppingCart } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import type { CartItem } from '@/lib/types';
 import { HazmatWarning } from '../products/hazmat-warning';
@@ -24,7 +24,7 @@ interface CartSheetProps {
 }
 
 export function CartSheet({ open, onOpenChange }: CartSheetProps) {
-  const { items, totalPrice, totalItems, updateQuantity, removeItem, clearCart } = useCart();
+  const { items, totalPrice, totalItems, removeItem, clearCart } = useCart();
   const hasHazmatItem = items.some(item => item.product.isHazmat);
 
   return (
