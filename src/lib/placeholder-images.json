@@ -3,26 +3,26 @@
     {
       "id": "hero_main",
       "description": "Abstract a-la-Mondrian background with perfume bottles.",
-      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user__gen4_0_3580598.jpeg",
+      "imageUrl": "https://images.unsplash.com/photo-1752520836249-2b8738e12664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJmdW1lJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzYzNTg4MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "perfume abstract"
     },
     {
       "id": "prod_adore_1",
       "description": "Main image for Adore product, showing the perfume bottle surrounded by its notes.",
-      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user__gen4_0_8377742.jpeg",
+      "imageUrl": "/adore-main.webp",
       "imageHint": "perfume bottle"
     },
     {
       "id": "prod_adore_2",
-      "description": "Packaging image for Adore product, showing the gift box.",
-      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user__gen4_0_9185799.jpeg",
-      "imageHint": "perfume box"
+      "description": "Detailed image for Adore product.",
+      "imageUrl": "/adore-detail.jpg",
+      "imageHint": "perfume detail"
     },
     {
       "id": "prod_adore_3",
-      "description": "Detail image for Adore 10ml product, showing the bottle with notes.",
-      "imageUrl": "https://storage.googleapis.com/project-ichigo-bucket/user__gen4_0_8590636.jpeg",
-      "imageHint": "perfume bottle"
+      "description": "Packaging image for Adore product, showing the gift box.",
+      "imageUrl": "/adore-packaging.jpg",
+      "imageHint": "perfume box"
     }
   ]
 }
