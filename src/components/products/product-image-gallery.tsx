@@ -37,7 +37,7 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
         ))}
       </div>
       <Card className="flex-1 overflow-hidden flex justify-center items-center">
-        <div className="relative w-full h-[400px] md:h-[600px]">
+        <div className="relative w-full h-[600px] max-h-[80vh]">
           <Image
             src={selectedImage.url}
             alt={selectedImage.alt}
