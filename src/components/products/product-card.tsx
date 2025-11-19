@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { formatPrice } from '@/lib/utils';
 import type { Product } from '@/lib/types';
@@ -13,17 +12,10 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const hasMultipleImages = product.images.length > 1;
-
-  const currentImage = isHovered && hasMultipleImages ? product.images[1] : product.images[0];
+  const currentImage = product.images[0];
 
   return (
-    <Card
-      className="overflow-hidden group relative transition-shadow duration-300 hover:shadow-xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <Card className="overflow-hidden group relative transition-shadow duration-300 hover:shadow-xl">
       <CardContent className="p-0">
         <Link href={`/products/${product.slug}`}>
           <div className="aspect-[3/4] relative overflow-hidden">

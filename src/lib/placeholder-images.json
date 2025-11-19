@@ -9,19 +9,19 @@
     {
       "id": "prod_adore_1",
       "description": "Main image for Adore product, showing the perfume bottle surrounded by its notes.",
-      "imageUrl": "/adore-main.webp",
+      "imageUrl": "/Adore/Adore_Main.webp",
       "imageHint": "perfume bottle"
     },
     {
       "id": "prod_adore_2",
       "description": "Detailed image for Adore product.",
-      "imageUrl": "/adore-detail.jpg",
+      "imageUrl": "/Adore/Adore_Details.jpg",
       "imageHint": "perfume detail"
     },
     {
       "id": "prod_adore_3",
       "description": "Packaging image for Adore product, showing the gift box.",
-      "imageUrl": "/adore-packaging.jpg",
+      "imageUrl": "/Adore/Adore_Packaging.jpg",
       "imageHint": "perfume box"
     }
   ]
