@@ -27,14 +27,16 @@ export function ProductCard({ product }: ProductCardProps) {
       <CardContent className="p-0">
         <Link href={`/products/${product.slug}`}>
           <div className="aspect-[3/4] relative overflow-hidden">
-            <Image
-              src={currentImage.url}
-              alt={currentImage.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              data-ai-hint={currentImage.hint}
-            />
+            {currentImage?.url && (
+              <Image
+                src={currentImage.url}
+                alt={currentImage.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                data-ai-hint={currentImage.hint}
+              />
+            )}
           </div>
         </Link>
         <div className="p-4 space-y-2">
