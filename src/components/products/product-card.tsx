@@ -1,0 +1,54 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { formatPrice } from '@/lib/utils';
+import type { Product } from '@/lib/types';
+import { AddToCartButton } from '@/components/cart/add-to-cart-button';
+
+interface ProductCardProps {
+  product: Product;
+}
+
+export function ProductCard({ product }: ProductCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const hasMultipleImages = product.images.length > 1;
+
+  const currentImage = isHovered && hasMultipleImages ? product.images[1] : product.images[0];
+
+  return (
+    <Card
+      className="overflow-hidden group relative transition-shadow duration-300 hover:shadow-xl"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CardContent className="p-0">
+        <Link href={`/products/${product.slug}`}>
+          <div className="aspect-[3/4] relative overflow-hidden">
+            <Image
+              src={currentImage.url}
+              alt={currentImage.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              data-ai-hint={currentImage.hint}
+            />
+          </div>
+        </Link>
+        <div className="p-4 space-y-2">
+          <h3 className="font-headline text-xl font-semibold truncate">
+            <Link href={`/products/${product.slug}`} className="hover:text-accent transition-colors">
+              {product.name}
+            </Link>
+          </h3>
+          <p className="text-lg font-medium text-muted-foreground">{formatPrice(product.price)}</p>
+        </div>
+        <div className="p-4 pt-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <AddToCartButton product={product} className="w-full" />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
