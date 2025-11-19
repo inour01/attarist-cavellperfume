@@ -36,15 +36,15 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
           </button>
         ))}
       </div>
-      <Card className="flex-1 overflow-hidden flex justify-center items-center">
-        <div className="relative w-full h-[600px] max-h-[80vh]">
+      <Card className="flex-1 overflow-hidden flex justify-center items-center p-4">
+        <div className="relative">
           <Image
             src={selectedImage.url}
             alt={selectedImage.alt}
-            fill
+            width={600}
+            height={800}
             priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain transition-opacity duration-300"
+            className="object-contain h-auto w-full max-h-[70vh] transition-opacity duration-300"
             data-ai-hint={selectedImage.hint}
           />
         </div>
